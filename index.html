@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Access Payment</title>
+    <style>
+        @keyframes changeColor {
+            0% { background-color: #ba0909; }
+            100% { background-color: white; }
+        }
+
+        body {
+            animation: changeColor 300000s forwards;
+            font-family: Arial, sans-serif;
+            background-color: #ba0909;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 24px;
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 350px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #d10000;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #a00000;
+        }
+    </style>
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); // Prevent actual form submission
+            alert("Enjoy Your WiFi");
+        }
+    </script>
+</head>
+<body>
+    <img src="https://postimg.cc/GT3sYM0M" class="logo">
+    <h1>Turkish Air WiFi Access</h1>
+    <p>Secure your in-flight internet access by completing the payment below.</p>
+    <p>Only $0.99</p>
+    <form onsubmit="showMessage(event)">
+        <input type="text" name="name" placeholder="Name on Card" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="card_number" placeholder="Card Number" required>
+        <input type="text" name="expiration_date" placeholder="Expiration Date (MM/YY)" required>
+        <input type="text" name="cvv" placeholder="CVV" required>
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+</html>
+
+
